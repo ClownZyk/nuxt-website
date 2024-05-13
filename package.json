@@ -20,6 +20,7 @@
   "dependencies": {
     "@nuxtjs/redirect-module": "^0.3.1",
     "@pinia/nuxt": "^0.4.11",
+    "@vercel/kv": "^1.0.1",
     "@vueuse/components": "^10.3.0",
     "@vueuse/core": "^10.3.0",
     "animate.css": "^4.1.1",
