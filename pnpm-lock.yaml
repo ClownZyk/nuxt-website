@@ -11,6 +11,9 @@ dependencies:
   '@pinia/nuxt':
     specifier: ^0.4.11
     version: 0.4.11(vue@3.3.4)
+  '@vercel/kv':
+    specifier: ^1.0.1
+    version: 1.0.1
   '@vueuse/components':
     specifier: ^10.3.0
     version: 10.3.0(vue@3.3.4)
@@ -39,7 +42,7 @@ devDependencies:
     version: 2.3.9(vue@3.3.4)
   nuxt:
     specifier: ^3.6.5
-    version: 3.6.5(@types/node@18.17.3)(sass@1.66.1)
+    version: 3.6.5(@types/node@18.17.3)(@vercel/kv@1.0.1)(sass@1.66.1)
   sass:
     specifier: ^1.66.1
     version: 1.66.1
@@ -1215,7 +1218,7 @@ packages:
       '@nuxt/kit': 3.7.3
       '@nuxt/schema': 3.7.3
       execa: 7.2.0
-      nuxt: 3.6.5(@types/node@18.17.3)(sass@1.66.1)
+      nuxt: 3.6.5(@types/node@18.17.3)(@vercel/kv@1.0.1)(sass@1.66.1)
       vite: 4.4.9(@types/node@18.17.3)(sass@1.66.1)
     transitivePeerDependencies:
       - rollup
@@ -1266,7 +1269,7 @@ packages:
       launch-editor: 2.6.0
       local-pkg: 0.4.3
       magicast: 0.2.10
-      nuxt: 3.6.5(@types/node@18.17.3)(sass@1.66.1)
+      nuxt: 3.6.5(@types/node@18.17.3)(@vercel/kv@1.0.1)(sass@1.66.1)
       nypm: 0.3.3
       ofetch: 1.3.3
       ohash: 1.1.3
@@ -1946,6 +1949,17 @@ packages:
       unhead: 1.3.5
       vue: 3.3.4
     dev: true
+
+  /@upstash/redis@1.25.1:
+    resolution: {integrity: sha512-ACj0GhJ4qrQyBshwFgPod6XufVEfKX2wcaihsEvSdLYnY+m+pa13kGt1RXm/yTHKf4TQi/Dy2A8z/y6WUEOmlg==}
+    dependencies:
+      crypto-js: 4.2.0
+
+  /@vercel/kv@1.0.1:
+    resolution: {integrity: sha512-uTKddsqVYS2GRAM/QMNNXCTuw9N742mLoGRXoNDcyECaxEXvIHG0dEY+ZnYISV4Vz534VwJO+64fd9XeSggSKw==}
+    engines: {node: '>=14.6'}
+    dependencies:
+      '@upstash/redis': 1.25.1
 
   /@vercel/nft@0.23.1:
     resolution: {integrity: sha512-NE0xSmGWVhgHF1OIoir71XAd0W0C1UE3nzFyhpFiMr3rVhetww7NvM1kc41trBsPG37Bh+dE5FYCTMzM/gBu0w==}
@@ -2994,6 +3008,9 @@ packages:
       shebang-command: 2.0.0
       which: 2.0.2
     dev: true
+
+  /crypto-js@4.2.0:
+    resolution: {integrity: sha512-KALDyEYgpY+Rlob/iriUtjV6d5Eq+Y191A5g4UqLAi8CyGP9N1+FdVbkc1SxKc2r4YAYqG8JzO2KGL+AizD70Q==}
 
   /css-declaration-sorter@6.4.1(postcss@8.4.28):
     resolution: {integrity: sha512-rtdthzxKuyq6IzqX6jEcIzQF/YqccluefyCYheovBOLhFT/drQA9zj/UbRAa9J7C0o6EG6u3E6g+vKkay7/k3g==}
@@ -4909,7 +4926,7 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: true
 
-  /nitropack@2.6.0:
+  /nitropack@2.6.0(@vercel/kv@1.0.1):
     resolution: {integrity: sha512-swhwjrNz0Zc5pBBrL3jdd4v1aJKNv0XbjCk1OreOm0zRbP8WxreGP5sAGpwDVpMH9mpIxyz5A5OSBzKa2lkkuQ==}
     engines: {node: ^16.11.0 || >=17.0.0}
     hasBin: true
@@ -4976,7 +4993,7 @@ packages:
       unctx: 2.3.1
       unenv: 1.7.3
       unimport: 3.1.3(rollup@3.28.1)
-      unstorage: 1.9.0
+      unstorage: 1.9.0(@vercel/kv@1.0.1)
     transitivePeerDependencies:
       - '@azure/app-configuration'
       - '@azure/cosmos'
@@ -5206,7 +5223,7 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /nuxt@3.6.5(@types/node@18.17.3)(sass@1.66.1):
+  /nuxt@3.6.5(@types/node@18.17.3)(@vercel/kv@1.0.1)(sass@1.66.1):
     resolution: {integrity: sha512-0A7V8B1HrIXX9IlqPc2w+5ZPXi+7MYa9QVhtuGYuLvjRKoSFANhCoMPRP6pKdoxigM1MBxhLue2VmHA/VbtJCw==}
     engines: {node: ^14.18.0 || >=16.10.0}
     hasBin: true
@@ -5247,7 +5264,7 @@ packages:
       local-pkg: 0.4.3
       magic-string: 0.30.3
       mlly: 1.4.0
-      nitropack: 2.6.0
+      nitropack: 2.6.0(@vercel/kv@1.0.1)
       nuxi: 3.6.5
       nypm: 0.2.2
       ofetch: 1.2.1
@@ -6810,7 +6827,7 @@ packages:
       webpack-sources: 3.2.3
       webpack-virtual-modules: 0.5.0
 
-  /unstorage@1.9.0:
+  /unstorage@1.9.0(@vercel/kv@1.0.1):
     resolution: {integrity: sha512-VpD8ZEYc/le8DZCrny3bnqKE4ZjioQxBRnWE+j5sGNvziPjeDlaS1NaFFHzl/kkXaO3r7UaF8MGQrs14+1B4pQ==}
     peerDependencies:
       '@azure/app-configuration': ^1.4.1
@@ -6848,6 +6865,7 @@ packages:
       idb-keyval:
         optional: true
     dependencies:
+      '@vercel/kv': 1.0.1
       anymatch: 3.1.3
       chokidar: 3.5.3
       destr: 2.0.1
