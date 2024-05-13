@@ -28,5 +28,8 @@ export default defineNuxtConfig({
       }
     }
   },
-  css: ['~/assets/styles/index.scss', 'animate.css']
+  css: ['~/assets/styles/index.scss', 'animate.css'],
+  routeRules: {
+    '/': { redirect: '/home' }
+  }
 })
