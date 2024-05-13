@@ -7,6 +7,11 @@ export default defineNuxtConfig({
       gzip: true,
       brotli: true,
     },
+    storage: {
+      data: {
+        driver: 'vercelKV'
+      }
+    }
   },
   modules: [
     // ...
